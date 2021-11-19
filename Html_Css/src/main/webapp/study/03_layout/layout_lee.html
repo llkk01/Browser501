@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+header {
+  background-color: black;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 10px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 1;
+}
+
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2>입양하기</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li type ="circle"><a href="#">애완경 종류</a></li>
+      <li type ="circle"><a href="#">입양하기</a></li>
+      <li type ="circle"><a href="#">건강돌보기</a></li>
+      <li type ="circle"><a href="#">더불어살기</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>강아지 용품 준비하기</h1>
+    <ul>
+    	<li>강아지집</li>
+        <li>강아지 먹이</li>
+        <li>밥그릇, 물병</li>
+        <li>이름표, 목줄</li>
+        <li>장난감, 개껌</li>
+        <li>애견용 간식</li>
+        <li>브러쉬, 빗, 털 제거 롤</li>
+        <li>귀 세정액, 구강스프레이, 기타 영양제</li>
+        <li>샴푸, 린스, 애견용 타올</li>
+    </ul>
+    
+  </article>
+</section>
+
+<footer>
+  <p>Copyright 2018 nuriding</p>
+</footer>
+
+</body>
+</html>

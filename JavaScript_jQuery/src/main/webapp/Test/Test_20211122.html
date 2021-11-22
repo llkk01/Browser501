@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+.centered {
+	text-align: center;
+}
+
+.tit {
+		font-weight: bold;
+		width: 120px;
+		float: left;
+	}
+	
+#header {
+	text-align: center
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header id = "header">
+<hr>
+<p>MEMBER INFO</p>
+</header>
+<hr>
+
+<form action="#" method="get">
+	<br>
+	<h4>*표시는 필수 입력 표시입니다.</h4>
+
+		<ul>
+			<li>  
+			<label for="id" class="tit">ID</label>
+			<input type="text" id="id" required="required" maxlength='14'><br>	
+			</li> <hr>
+			
+			<li>
+			<label for="name" class="tit">이름</label>
+			<input type="text" id="name" required="required" ><br>	
+			</li><hr>
+			
+			<li>
+			<label for="password" class="tit">비밀번호</label>
+			<input type="password" id="password" required="required" maxlength='15'><br>	
+			</li><hr>
+			
+			<li>
+			<label for="password" class="tit">비밀번호확인</label>
+			<input type="password" id="password" required="required"><br>	
+			</li><hr>
+			
+			<li>
+			<label for="birthday" class="tit">생일</label>
+			<input type="date" id="birthday" ><br>	
+			</li><hr>
+			
+			<li>
+			<label for="email" class="tit">이메일</label>
+			<input type="email" id="email">
+   			<input type="submit" name="btnSubmit" value="중복확인" ><br>
+			</li><hr>
+			
+			<li>
+			<label for="tell" class="tit">휴대폰</label>
+			<input type="tel" id="tell" ><br>	
+			</li><hr>
+			
+			<li>
+			<label for="addr" class="tit">주소</label>
+			<input type="text" id="addr" ><br>	
+			</li><hr>
+			
+			<li>
+			<label for="addr2" class="tit">상세주소</label>
+			<input type="text" id="addr2" ><br>	
+			</li><hr>		
+		</ul>
+		
+<div class = "centered">
+	<input type="submit" value="수정">
+	<input type="submit" value="목록">
+</div>
+
+</form>
+
+</body>
+</html>

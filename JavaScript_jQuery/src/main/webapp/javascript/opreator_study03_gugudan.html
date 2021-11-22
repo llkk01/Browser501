@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+1. 구구단 작성(1단 ~ 9단)
+<hr>
+
+<script>
+
+	//몇단인지 표시하는 헤더 부분
+	 var dan = "";
+		for(i=1;i<10;i++){
+		dan += '<th align="center" bgcolor="lightgray">'+ i+'단</th>';
+	}
+
+	//구구단 본문 부분
+	var danmain = "";
+    	for(i=1;i<10;i++){
+    		danmain+= '<td>';
+        	for(j=1;j<10;j++){
+        		danmain += i +'*'+ j +'='+ (i*j)+"<br>";
+            }
+        	danmain += '</td>';
+        }
+
+        //문자열 합치기
+        var danTable = '<table border="1"><tr>'+dan+'</tr><tr>'
+        +danmain+'</tr></table>';
+
+        //최종 문자열 출력하기
+        document.write(danTable);
+
+</script>
+<br>
+ 
+ 
+ 		
+2. 5단만 출력<br>
+<script type="text/javascript">
+
+var e = prompt("구구단의 몇단을 출력?","0");
+for(var t=1; t<10; t++){
+  var result = e + "x" + t + "=" + e*t + "<br>";
+  document.write(result);
+}
+
+
+</script>
+
+</body>
+</html>

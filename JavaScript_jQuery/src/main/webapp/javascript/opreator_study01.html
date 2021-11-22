@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style
+>
+table, th, td {
+  border:1px solid black;
+}
+
+</style>
+
+</head>
+<body>
+
+5행 5열 테이블 만들기<hr>
+
+1. HTML로 (5,5)테이블 만들고, 1부터 순차적으로 숫자 넣기<br>
+<table border= "1">
+		<tr>
+			<th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th>
+		</tr>
+		
+		<tr>
+			<th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>10</th>
+		</tr>
+		
+		<tr>
+			<th>11</th> <th>12</th> <th>13</th> <th>14</th> <th>15</th>
+		</tr>
+		
+		<tr>
+			<th>16</th> <th>17</th> <th>18</th> <th>19</th> <th>20</th>
+		</tr>
+		
+		<tr>
+			<th>21</th> <th>22</th> <th>23</th> <th>24</th> <th>25</th>
+		</tr>
+
+</table>
+
+
+2. Javascript 로 (5,5)테이블 만들고, 1부터 순차적으로 숫자넣기<br>
+<script type="text/javascript">
+
+var num = 1
+var t = "<table border='1'>";
+
+for (var i=1; i<=5; i++) {
+	t += "<tr>";
+	for (var k=1; k<=5; k++) {
+		t += "<td>"+num +"</td>";
+		num++;
+		}
+		t += "</tr>";
+	}
+	
+	t +="</table>";
+	
+	console.log(t);
+	document.write(t);
+
+</script>
+
+</body>
+</html>

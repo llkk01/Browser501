@@ -2,10 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>구구단 작성</title>
 </head>
 <body>
-1. 구구단 작성(1단 ~ 9단)
+
+
+0-1. 테이블을 이용한 구구단 작성(1단 ~ 9단)
 <hr>
 
 <script>
@@ -34,11 +36,11 @@
         document.write(danTable);
 
 </script>
-<br>
- 
- 
+<br><hr>
+
+
  		
-2. 5단만 출력<br>
+0-2. 입력받아 입력 받은 단만 구구단 출력하기<br><hr>
 <script type="text/javascript">
 
 var e = prompt("구구단의 몇단을 출력?","0");
@@ -46,7 +48,32 @@ for(var t=1; t<10; t++){
   var result = e + "x" + t + "=" + e*t + "<br>";
   document.write(result);
 }
+</script><br><hr>
 
+
+
+1. 구구단 작성(2단 ~ 9단)<hr>
+<script>
+	for (var i=2; i<=9; i++) {
+		// "&nbsp;" - 한칸 띄어쓰기할때 사용
+		document.write("<h3>" +i +"&nbsp;"+"&nbsp;"+"&nbsp;" +"단 </h3>");
+		for (var k=1; k<=9; k++) {
+			document.write(i +"X" +k +" = " +(i*k),"<br>");
+			}
+		}
+
+</script>
+<br><hr>
+ 
+ 
+ 
+2. 5단만 출력<br><hr>
+<script>
+	var i = 1;
+	while(i <= 9){
+		document.write("5 X " +i +" = " +(i*5),"<br>");
+		i++;
+	}
 
 </script>
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수학객체</title>
+</head>
+<body>
+
+	<script>
+	//1부터 3까지 난수(정수)를 발생(컴퓨터 가위(1), 바위(2), 보(3))
+	var random = Math.ceil(Math.random() *3);
+	var choose = prompt("가위, 바위, 보 중 선택하세요?","");
+	var answer;
+	/*난수를 이용해 컴퓨터 가위 바위 보 이미지 출력*/
+	document.write(alt='컴퓨터 가위, 바위, 보 맞추기'+'<br>'
+				+"<img src ='../images/math_img_" +random +".jpg'>");
+	//사용자가 낸 값과 컴퓨터의 값이 일치하는지 조건검사.
+	
+	switch(choose) {
+		case "가위":
+			answer = "1";
+			break;
+			
+		case "바위":
+			answer = "2";
+			break;
+			
+		case "보":
+			answer = "3";
+			break;
+			
+		default :
+			alert("다시 선택 해주세요.");
+			location.reload();
+			
+	};
+	
+	if(answer == 1) {
+		if(random == 1){
+			alert("맞췄습니다! 축하합니다!!");
+		} else if(random == 2){
+			alert("틀렸네요! 다음기회 또 도전하세요!");
+		}else if(random == 3){
+			alert("틀렸네요! 다음기회 또 도전하세요!");
+		}
+	}
+	
+	if(answer == 2) {
+		if(random == 2){
+			alert("맞췄습니다! 축하합니다!!");
+		} else if(random == 1){
+			alert("틀렸네요! 다음기회 또 도전하세요!");
+		}else if(random == 3){
+			alert("틀렸네요! 다음기회 또 도전하세요!");
+		}
+	}
+	
+	if(answer == 3) {
+		if(random == 3){
+			alert("맞췄습니다! 축하합니다!!");
+		} else if(random == 1){
+			alert("틀렸네요! 다음기회 또 도전하세요!");
+		}else if(random == 2){
+			alert("틀렸네요! 다음기회 또 도전하세요!");
+		}
+	}
+	</script>
+
+</body>
+</html>

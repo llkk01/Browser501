@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 기본</title>
+
+<!-- jquery에 연결하여 사용해야한다. -->
+<script src = "js/jquery-3.6.0.js"></script>
+
+</head>
+<body>
+
+jQuery : 자바스크립트를 이용해 만든 라이브러리(자바스크립트로 만들어진 다양한 함수들의 집합) <br>
+	   : 자바스크립트는 호환성이 적다 > jQuery를 이용해 호환성 증대 : App 설계시 하나만 설계(Android,Apple) <br> 
+	   : 쉽고 편리한 애니메이션(Animation) 효과 기능 <br><hr>
+
+<script>
+	$(document).ready(function() {
+		alert("jQuery Start!");
+	});
+	
+	$(function() {
+		alert("jQuery Start!!!");
+	});
+	
+	$(function() {
+		$("*").css("border","1px solid blue");
+	});
+</script>
+
+	<h1>jQuery</h1>
+	<h2>선택자(selector)</h2>
+	<h2>직접 selector </h2>
+
+</body>
+</html>

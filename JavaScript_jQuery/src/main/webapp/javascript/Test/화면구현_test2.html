@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>화면구현 테스트</title>
+
+<style>
+
+.box > ul > li > p {
+color: orange;
+}
+
+header .menu li:nth-child(2) {
+background: red;
+}
+
+#wrap .content .prod {
+border: 3px dashed gray;
+}
+
+</style>
+
+</head>
+<body>
+[문항1]  설명란에 있는 CSS 문법을 해석하세요. <br>
+1. .box > ul > li > p {color: orange;} <br>
+2. header .menu li:nth-child(2) {background: red;} <br>
+3. #wrap .content .prod {border: 3px dashed gray;} <br>
+
+<div class="box">
+	<ul>
+		<li><p>a</p></li>
+		<li><p>b</p></li>
+	<li><ul>
+		<li><p>aa</p></li>
+		<li><p>bb</p></li>
+	</ul></ul>
+	
+	<ul>
+		<li><p>aaa</p></li>
+		<li><p>bbb</p></li>
+	</ul>
+</div>
+<header>
+	<div class = "menu">
+		<ul>
+			<li>mmmmm</li>
+			<li>mmmmm</li>
+			<li>mmmmm</li>
+			<li>mmmmm</li>
+			<li>mmmmm</li>
+		</ul>
+	</div>
+</header>
+
+<div id = "wrap">
+	<div class = "content">
+		<div class = "prod">
+		<ul>
+			<li>mmmmm</li>
+			<li>mmmmm</li>
+			<li>mmmmm</li>
+			<li>mmmmm</li>
+			<li>mmmmm</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

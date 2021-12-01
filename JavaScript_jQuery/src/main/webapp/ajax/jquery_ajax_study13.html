@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<title>서버의 데이터를 대상 ajax를 이용해 작성하기</title>
+<style>
+	div{
+		width: 180px;
+		height: 150px;
+		margin: 3px;
+		float: left;
+	}
+</style>
+
+<script>
+	$(function() {
+		$("#menu1").click(function() {
+			$.ajax({
+				url:"source/menu.html",
+				datatype:"html",
+				success: function(data) {
+					$("#m1").html(data);
+				}
+			});
+		});
+		
+		$("#menu2").click(function() {
+			$.ajax({
+				url:"source/menu.html ",
+				datatype:"html",
+				success: function(data) {
+					$("#m2").html($(data).find('li'));
+				}
+			});
+		});
+		
+	});
+</script>
+
+</head>
+<body>
+<div>
+	<a href = "#" id = "menu1" >메뉴 보기 1</a><br>
+	<span id = "m1"> </span>
+</div>
+<div>
+	<a href = "#" id = "menu2" >메뉴 보기 2</a><br>
+	<span id = "m2"> </span>
+</div>
+</body>
+</html>

@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//1.annotation 방식 - 권장사항
-@WebServlet("/ch02_start/Start")
-public class Start extends HttpServlet {
+//Servlet Mapping 방법 : annotation, Web.xml
+//1.annotation 방식(@) - 권장사항
+//@WebServlet("/ch02_start/Start_Xml")
+public class StartXML extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

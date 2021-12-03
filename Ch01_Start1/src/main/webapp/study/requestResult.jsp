@@ -32,7 +32,7 @@
 		<tr>
 			<td width = "150">이름</td>
 <%-- 			${Param.name} EL표기법 --%>
-			<td width = "150">${parame.name }</td>
+			<td width = "150">${param.name}</td>
 		</tr>
 		
 		<tr>

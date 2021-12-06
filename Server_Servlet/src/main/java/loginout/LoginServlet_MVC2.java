@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+//MVC : Controller
 @WebServlet("/login/login_mvc2")
 public class LoginServlet_MVC2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -28,7 +29,7 @@ public class LoginServlet_MVC2 extends HttpServlet {
 		//아이디와 패스워드가 맞아야 로그인이 열리는 if문
 		if(id.equals("admin") && pw.equals("1234")) {
 			
-			// 세션을 위한 작업
+			// 세션을 위한 작업(속성을 하나 만들어서 처리)
 			HttpSession session = request.getSession();
 			session.setAttribute("ids", id); //변수값을 저장하겠다. ("ids"-이름 id-값) 
 			session.setAttribute("pws", pw);

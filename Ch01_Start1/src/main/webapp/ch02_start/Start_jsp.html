@@ -2,14 +2,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Insert title here(P.85)</title>
 </head>
 
 <body>
+Get방식 (3가지방법)
+- get방식 이용시 파라미터 전송방법(3가지) <br><hr>
+1. a href 태그를 이용하는 방법 <br>
+	예)a href = "Start.jsp?id=hong"링크</a><br>
+2. form method = "get"으로 전달하는 방법 <br>
+	예) form action = "Start.jsp" method = "get" <br>
+3. 웹 브라우저의 주소에 직접 Query문자열을 포함하는 URL을 입력하는 방법 <br>
+	예) http://localhost:8080/Server_Jsp/ch02_start/Start.jsp?name=abcd <br><hr>
+ 
+
+
 <form action = "Start.jsp" method = "get">
 	<input type = "text" name = "name" value = "홍길동"> <br>
 	<input type = "submit" value = "전송"> <br>
 </form>
+<a href = "Start.jsp?id=hong">링크</a>
+
 </body>
 
 </html>

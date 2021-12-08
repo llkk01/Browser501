@@ -29,8 +29,9 @@ public class LoginServlet_MVC2 extends HttpServlet {
 		//아이디와 패스워드가 맞아야 로그인이 열리는 if문
 		if(id.equals("admin") && pw.equals("1234")) {
 			
-			// 세션을 위한 작업(속성을 하나 만들어서 처리)
+			//세션 만들기 (속성을 하나 만들어서 처리)
 			HttpSession session = request.getSession();
+			//만들어진 세션에 이름과 데이터 설정하기
 			session.setAttribute("ids", id); //변수값을 저장하겠다. ("ids"-이름 id-값) 
 			session.setAttribute("pws", pw);
 			

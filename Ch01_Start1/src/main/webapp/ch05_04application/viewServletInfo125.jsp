@@ -21,6 +21,14 @@ application : JSP 기본객체 중 하나이다.
 서블릿 메이저 버전 : <%=application.getMajorVersion() %> <br>
 서블릿 마이너 버전 : <%=application.getMinorVersion() %> <br>
 
+<hr>
+::[getInitParameter()]:: <br>
+<%
+	String param1 = application.getInitParameter("logEnabled");
+	String param2 = application.getInitParameter("debugLevel");
+	
+	out.println("logEnabled : " +param1 +"<br>" +"debugLevel : " +param2);
+%>
 
 </body>
 </html>

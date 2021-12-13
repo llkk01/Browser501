@@ -38,11 +38,11 @@ public class Sports_Servlet_Xml extends HttpServlet {
 		sess.setAttribute("s1", sports);
 		sess.setAttribute("s2", sex);
 		
-		RequestDispatcher d = req.getRequestDispatcher("sport_mvc2.jsp?id=hong");
+		RequestDispatcher d = req.getRequestDispatcher("sport_mvc2.jsp?id=hong"); //파라미터를 통해 값 전달
 		d.forward(req, resp); //forward 목적파일 출력("sport_mvc2.jsp")
 		
 		
-		//MVC model1 작성
+		//MVC model1 작성 --> 실행결과가 출력되지 않음(forward는 한번 가면 돌아오지않기때문에)
 		PrintWriter out = resp.getWriter();
 		out.println("<html><body>");
 		for(String s : sports) {

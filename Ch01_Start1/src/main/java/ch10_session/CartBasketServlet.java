@@ -2,17 +2,18 @@ package ch10_session;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
-@WebServlet("/ch09_cookie/study09/CartBasketCookie2")
-public class CartBasketCookieServlet extends HttpServlet {
+@WebServlet("/ch10_session/study13/CartBasket")
+public class CartBasketServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -27,18 +28,19 @@ public class CartBasketCookieServlet extends HttpServlet {
 		
 		out.println("<html><body>장바구니 리스트" +"<br>");
 		
-		Cookie[] cookies = request.getCookies();
-	
-		if(cookies != null) { 
-			for(Cookie c : cookies){
-				out.println(c.getName() +" : " +c.getValue() +"<br>");
-			}
+		//세션이 있는 상태
+		HttpSession session = request.getSession(false);
+		session.setMaxInactiveInterval(200);
+		
+		if(session != null) {
+			ArrayList<String> list = (ArrayList<String>) session.getAttribute("product");
+			out.println("상품 리스트" +list +"<br>");
 		}else {
-			out.println("장바구니가 비어있습니다..<br><br>");
+			out.println("세션 없음" +"<br>");
 		}
 		
-		out.println("<a href='cookie.html'>상품선택페이지</a><br>");
-		out.println("<a href='CartDeleteCookie'>장바구니 비우기</a><br>");
+		out.println("<a href='product.html'>상품선택페이지</a><br>");
+		out.println("<a href='CartDelete'>장바구니 비우기</a><br>");
 		out.println("</body></html>");
 	}
 

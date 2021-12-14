@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 //Servlet에서 Servlet으로 데이터 전송
 
-@WebServlet("/ch10_session/study10/result")
+//@WebServlet("/ch10_session/study10/result")
 public class ResultServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    

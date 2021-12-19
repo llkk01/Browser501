@@ -30,28 +30,27 @@ public class Join extends HttpServlet {
 		String pw = request.getParameter("password");
 		String result = null;
 		
+		Member member = new Member();
 		
-//		  if ( member != null ) {
-//			  session.setAttribute("id", id);
-//			  session.setAttribute("result", 1);
-//			
-//			  RequestDispatcher d = request.getRequestDispatcher("login.jsp");
-//			  d.forward(request, response);
-//		  }
-//		  
-//		  if ( member == null ) {
-//			  session.setAttribute("id", id);
-//			  session.setAttribute("result", -1);
-//			
-//			  RequestDispatcher d = request.getRequestDispatcher("login.jsp");
-//			  d.forward(request, response);
-//		  }else {
-//			  session.setAttribute("id", id);
-//			  session.setAttribute("result", 0);
-//			  
-//			  RequestDispatcher d = request.getRequestDispatcher("login.jsp");
-//			  d.forward(request, response);
+		  if ( member != null ) {
+			  session.setAttribute("id", id);
+			  session.setAttribute("result", 1);
+			  RequestDispatcher d = request.getRequestDispatcher("login.jsp");
+			  d.forward(request, response);
 		  }
+	  
+		  if ( member == null ) {
+			  session.setAttribute("id", id);
+			  session.setAttribute("result", -1);
+			  RequestDispatcher d = request.getRequestDispatcher("login.jsp");
+			  d.forward(request, response);
+		  }else {
+			  session.setAttribute("id", id);
+			  session.setAttribute("result", 0);
+			  RequestDispatcher d = request.getRequestDispatcher("login.jsp");
+			  d.forward(request, response);
+		  }
+	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

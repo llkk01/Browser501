@@ -30,7 +30,7 @@ public class MemberDao {
 		 ResultSet rs = null;
 		
 		 try {
-			String sql = "select id,password from madang";
+			String sql = "select id,password, name, address, tel, reg_date from member2;";
 			 con = DriverManager.getConnection(url, userid, passwd);
 				pstmt= con.prepareStatement(sql);
 				rs = pstmt.executeQuery();
@@ -40,11 +40,11 @@ public class MemberDao {
 					String name = rs.getString("name");
 					String address = rs.getString("address");
 					String tel = rs.getString("tel");
-					String reg_date = rs.getString("reg_date");
+					Date reg_date = rs.getDate("reg_date");
 					
-					Member member = new Member();
-
+					Member member = new Member(id,password, name, address, tel, reg_date);
 					list.add(null);
+					
 				}
 		} catch (SQLException e) {
 			

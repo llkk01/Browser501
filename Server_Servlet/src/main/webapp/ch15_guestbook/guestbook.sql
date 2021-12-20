@@ -8,5 +8,8 @@ create table guestbook_message(
 	message long not null
 );
 
+
 --auto_increment(MySQL) => sequence(Oracle)로 변경해서 작업
-create sequence message_id_seq;
+create sequence message_id_seq INCREMENT BY 1 START WITH 1; 
+
+commit;

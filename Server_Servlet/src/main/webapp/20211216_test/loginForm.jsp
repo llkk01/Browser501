@@ -12,10 +12,8 @@
  	$(document).ready(function() {
  		$("#id").focus();
  	});
-	
+ 	
 </script> 
-
-
 
 
 <title>문항2</title>

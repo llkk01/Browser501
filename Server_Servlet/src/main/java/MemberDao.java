@@ -23,29 +23,32 @@ public class MemberDao {
 		}
 	}
 	
-	public ArrayList<MemberDao> select(){
-		 ArrayList<MemberDao> list = new ArrayList<MemberDao>();
+	public ArrayList<Member> select(){
+		 ArrayList<Member> list = new ArrayList<Member>();
 		 Connection con = null;
 		 PreparedStatement pstmt = null;
 		 ResultSet rs = null;
 		
 		 try {
 			String sql = "select id,password, name, address, tel, reg_date from member2;";
-			 con = DriverManager.getConnection(url, userid, passwd);
+				con = DriverManager.getConnection(url, userid, passwd);
 				pstmt= con.prepareStatement(sql);
 				rs = pstmt.executeQuery();
-				while(rs.next()) {
-					String id = rs.getString("id");
-					String password = rs.getString("password");
-					String name = rs.getString("name");
-					String address = rs.getString("address");
-					String tel = rs.getString("tel");
-					Date reg_date = rs.getDate("reg_date");
 					
-					Member member = new Member(id,password, name, address, tel, reg_date);
-					list.add(null);
-					
-				}
+					if(rs != null) {
+						list = new ArrayList<Member>();
+						while(rs.next()) {
+							Member member = new Member();
+							member.setId(rs.getString("id"));
+							member.setPassword(rs.getString("password"));
+							member.setName(rs.getString("name"));
+							member.setAddress(rs.getString("address"));
+							member.setTel(rs.getString("tel"));
+							member.setReg_date(rs.getDate("reg_date"));
+							
+							list.add(member);
+						}
+					}
 		} catch (SQLException e) {
 			
 		}finally {

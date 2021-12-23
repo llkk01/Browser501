@@ -6,7 +6,7 @@ public class Member {
 	private String password;
 	private String name;
 	private Date reg_date;
-	
+
 	public Member() {
 		// TODO Auto-generated constructor stub
 	}
@@ -50,7 +50,5 @@ public class Member {
 	public void setReg_date(Date reg_date) {
 		this.reg_date = reg_date;
 	}
-	
-	
-	
+
 }

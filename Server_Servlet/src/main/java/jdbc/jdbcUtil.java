@@ -12,7 +12,7 @@ public class jdbcUtil {
 		if (rs != null) {
 			try {
 				rs.close();
-			}catch (SQLException e) {
+			}catch (SQLException ex) {
 				
 			}
 		}
@@ -22,7 +22,7 @@ public class jdbcUtil {
 		if (stmt != null) {
 			try {
 				stmt.close();
-			}catch (SQLException e) {
+			}catch (SQLException ex) {
 	
 			}
 		}
@@ -32,7 +32,7 @@ public class jdbcUtil {
 		if (conn != null) {
 			try {
 				conn.close();
-			}catch (SQLException e) {
+			}catch (SQLException ex) {
 				
 			}
 		}
@@ -42,7 +42,7 @@ public class jdbcUtil {
 		if (conn != null) {
 			try {
 				conn.rollback();
-			}catch (SQLException e) {
+			}catch (SQLException ex) {
 				
 			}
 		}

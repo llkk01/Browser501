@@ -17,25 +17,24 @@ public class MessageListView {
 		
 		public MessageListView(List<Message> messageList, int messageTotalCount, 
 				int currentPageNumber, int messageCountPerPage, 
-				int StartRow, int endRow) {
-			
+				int startRow, int endRow) {
 			this.messageList = messageList;
 			this.messageTotalCount = messageTotalCount;
 			this.currentPageNumber = currentPageNumber;
 			this.messageCountPerPage = messageCountPerPage;
-			this.firstRow = StartRow;
+			this.firstRow = startRow;
 			this.endRow = endRow;
-			
+
 			calculatePageTotalCount();
 		}
 		
 		public void calculatePageTotalCount() {
-			if(messageTotalCount == 0) {
+			if (messageTotalCount == 0) {
 				pageTotalCount = 0;
-			}else {
-				pageTotalCount = messageTotalCount / messageCountPerPage;
-				if(messageTotalCount % messageCountPerPage > 0) {
-					pageTotalCount++;
+			} else {
+				pageTotalCount = messageTotalCount / messageCountPerPage;//7/3
+				if (messageTotalCount % messageCountPerPage > 0) {
+					pageTotalCount++;//2 ==>  3
 				}
 			}
 		}

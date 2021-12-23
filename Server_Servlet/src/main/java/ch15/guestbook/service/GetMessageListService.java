@@ -10,6 +10,7 @@ import ch15.guestbook.model.Message;
 import ch15.jdbc.connection.ConnectionProvider;
 import jdbc.jdbcUtil;
 
+
 //P.457
 public class GetMessageListService {
 

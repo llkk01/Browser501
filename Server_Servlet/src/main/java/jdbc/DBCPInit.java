@@ -55,7 +55,7 @@ public class DBCPInit extends HttpServlet {
 			PoolingDriver driver = 
 					(PoolingDriver) DriverManager.getDriver("jdbc:apache:commons:dbcp:");
 			//pool 등록: 이름("ch14_Db)
-			driver.registerPool("Ch14_Db", connectionPool);
+			driver.registerPool("ch14_Db", connectionPool);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

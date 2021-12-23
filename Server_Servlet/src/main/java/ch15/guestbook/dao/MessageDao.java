@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -22,7 +22,6 @@ public class MessageDao {
 	}
 
 	private MessageDao() {
-
 	}
 
 	public int insert(Connection conn, Message message) throws SQLException {
@@ -51,10 +50,9 @@ public class MessageDao {
 		ResultSet rs = null;
 
 		try {
-			pstmt = conn.prepareStatement("select * from guesbook_message where message_id = ?");
+			pstmt = conn.prepareStatement("select * from guestbook_message where message_id = ?");
 			pstmt.setInt(1, messageId);
 			rs = pstmt.executeQuery();
-
 			if (rs.next()) {
 				return makeMessageFromResultSet(rs);
 			} else {
@@ -65,7 +63,8 @@ public class MessageDao {
 			jdbcUtil.close(pstmt);
 		}
 	}
-
+	
+	//ResultSet에서데이터를 읽어와서 메시지 생성: select(), selectLIst() 에서 사용됨
 	private Message makeMessageFromResultSet(ResultSet rs) throws SQLException {
 		Message message = new Message();
 		message.setId(rs.getInt("message_id"));
@@ -75,11 +74,11 @@ public class MessageDao {
 		return message;
 	}
 
+	//guestbook_message테이블의 전체 레코드 갯수
 	public int selectCount(Connection conn) throws SQLException {
-
-		java.sql.Statement stmt = null;
+		
+		Statement stmt = null;
 		ResultSet rs = null;
-
 		try {
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery("select count(*) from guestbook_message");
@@ -108,8 +107,8 @@ public class MessageDao {
 							+ "    ) where rownum <= ? "
 							+ ") where rnum >= ?");
 			
-			pstmt.setInt(1, firstRow - 1);
-			pstmt.setInt(2, endRow - firstRow + 1);
+			pstmt.setInt(1, endRow);
+			pstmt.setInt(2, firstRow);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
 				List<Message> messageList = new ArrayList<Message>();

@@ -10,7 +10,8 @@ public class ConnectionProvider {
 	public static Connection getConnection() throws SQLException {
 		//pool 등록: 이름("ch14_Db") <DBCPInit.java>
 		//driver.registerPool("Ch14_Db", connectionPool);
-		return DriverManager.getConnection("jdbc:apache:commons:dbcp:Ch14_Db");
+		return DriverManager.getConnection(
+				"jdbc:apache:commons:dbcp:Ch14_Db");
 	
 	}
 }

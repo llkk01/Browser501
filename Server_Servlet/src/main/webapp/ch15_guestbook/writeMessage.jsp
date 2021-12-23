@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="ch15.guestbook.model.Message" %>
-<%@ page import="ch15.guestbook.service.WriteMessagetService" %>
+<%@ page import="ch15.guestbook.service.WriteMessageService" %>
 
 <%
 	request.setCharacterEncoding("utf-8");
@@ -12,8 +11,8 @@
 </jsp:useBean>
 
 <%
-	WriteMessagetService writeService = WriteMessagetService.getInstance();
-	writeService.write(message);
+ 	WriteMessageService writeService = WriteMessageService.getInstance();
+ 	writeService.write(message);
 %>
 
 <!DOCTYPE html>
@@ -25,6 +24,6 @@
 <body>
 방명록에 메세지를 남겼습니다. 
 <br/>
-<a href="list.jsp">[목록보기]</a>
+<a href="list.jsp">[목록 보기]</a>>
 </body>
 </html>
